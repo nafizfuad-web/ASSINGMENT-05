@@ -74,6 +74,10 @@
   transition: color 0.2s ease;
 }
 
+.nav-link:first-child {
+  color: #ec4899;
+}
+
 .nav-link:hover {
   color: var(--text);
 }
@@ -353,7 +357,7 @@
 }
 
 .stack-sidebar {
-  width: 240px;
+  width: 280px;
   min-height: 168px;
   margin-top: 120px;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(248, 245, 255, 0.9));
@@ -430,9 +434,9 @@
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  width: 238px;
-  min-height: 66px;
-  padding: 0.5rem 0.6rem;
+  width: 100%;
+  min-height: 76px;
+  padding: 0.65rem 0.7rem;
   border: 1px solid rgba(148, 163, 184, 0.18);
   border-radius: 16px;
   background: linear-gradient(135deg, rgba(247, 244, 255, 0.9), rgba(255, 255, 255, 0.8));

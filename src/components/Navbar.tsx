@@ -2,13 +2,7 @@ import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import logoText from '../../assets/logo-text.png';
 
-const navItems = [
-    { label: 'Home', href: '#home' },
-    { label: 'Technologies', href: '#technologies' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'About', href: '#about' },
-    { label: 'Contact', href: '#contact' },
-];
+const navItems = ['Home', 'Technologies', 'Projects', 'About', 'Contact'];
 
 function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,8 +16,8 @@ function Navbar() {
 
                 <div className="nav-links desktop-nav" aria-label="Desktop navigation">
                     {navItems.map((item) => (
-                        <a key={item.label} href={item.href} className="nav-link">
-                            {item.label}
+                        <a key={item} href="#" className="nav-link">
+                            {item}
                         </a>
                     ))}
                 </div>
@@ -51,8 +45,8 @@ function Navbar() {
                 <div className="mobile-menu mobile-only">
                     <div className="mobile-menu-inner">
                         {navItems.map((item) => (
-                            <a key={item.label} href={item.href} className="nav-link mobile-link" onClick={() => setIsMenuOpen(false)}>
-                                {item.label}
+                            <a key={item} href="#" className="nav-link mobile-link" onClick={() => setIsMenuOpen(false)}>
+                                {item}
                             </a>
                         ))}
                         <div className="mobile-actions">

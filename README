@@ -1,0 +1,46 @@
+
+
+### 1. What is JSX, and why is it used in React?
+
+**Answer:**  
+JSX is basically a way to write HTML-like code inside JavaScript. We use it in React because it makes creating the UI much easier and cleaner.
+
+
+### 2. What is the difference between props and state?
+
+**Answer:**  
+Props are used to send data from a parent component to a child component. State is used to store data inside a component that can change over time.
+
+**Simply:** Props come from the parent, and state is managed by the component itself.
+
+
+### 3. What does the `useState` hook do, and where did you use it in this project?
+
+**Answer:**  
+`useState` is used to store and update data in a React component. In my project, I used it to keep track of the stack items that the user selects or adds.
+
+
+### 4. What does the `useEffect` hook do, and why did you need it to load the JSON data?
+
+**Answer:**  
+`useEffect` is used when we need to do something after the component loads or updates. I used it to load the JSON data when my project started.
+
+
+### 5. Why does every item in a `.map()` list need a unique `key` prop?
+
+**Answer:**  
+The `key` helps React identify each item in a list. So when something changes, React can understand which item was changed, added, or removed.
+
+
+### 6. What is conditional rendering? Show one place you used it.
+
+**Answer:**  
+Conditional rendering means showing something based on a condition. In my project, when the stack is empty, I show an empty stack message. When there are items, I show the selected stack instead.
+
+
+### 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
+
+**Answer:**  
+The parent sends data to the child using props. If the child needs to send something back, the parent can pass a function through props, and then the child calls that function.
+
+**Simply:** Parent to child is done with props, and child to parent is usually done with a function passed through props.

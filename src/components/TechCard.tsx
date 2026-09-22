@@ -22,26 +22,29 @@ function TechCard({ tech, isSelected, onAdd }: TechCardProps) {
         <p>{tech.description}</p>
       </div>
 
-      <div className="tech-meta">
-        <span className="meta-label">Category</span>
-        <span className="meta-value">{tech.category}</span>
-      </div>
-
-      <div className="tech-meta">
-        <span className="meta-label">Difficulty</span>
-        <span className="meta-value">{tech.difficulty}</span>
-      </div>
-
-      <div className="tech-rating">
-        <span className="rating-stars" aria-label={`${tech.rating} out of 5 stars`}>
-          {[...Array(5)].map((_, index) => (
-            <FaStar
-              key={`${tech.id}-star-${index}`}
-              className={index < Math.round(tech.rating) ? 'star filled' : 'star'}
-            />
-          ))}
-        </span>
-        <span className="rating-value">{tech.rating.toFixed(1)}</span>
+      <div className="tech-meta-row">
+        <div className="tech-meta-item">
+          <span className="meta-label">Category</span>
+          <span className="meta-value">{tech.category}</span>
+        </div>
+        <div className="tech-meta-item">
+          <span className="meta-label">Difficulty</span>
+          <span className="meta-value">{tech.difficulty}</span>
+        </div>
+        <div className="tech-meta-item rating-inline">
+          <span className="meta-label">Rating</span>
+          <span className="rating-inline-content">
+            <span className="rating-stars" aria-label={`${tech.rating} out of 5 stars`}>
+              {[...Array(5)].map((_, index) => (
+                <FaStar
+                  key={`${tech.id}-star-${index}`}
+                  className={index < Math.round(tech.rating) ? 'star filled' : 'star'}
+                />
+              ))}
+            </span>
+            <span className="rating-value">{tech.rating.toFixed(1)}</span>
+          </span>
+        </div>
       </div>
 
       <button
